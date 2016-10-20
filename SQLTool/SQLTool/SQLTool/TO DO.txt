@@ -1,0 +1,11 @@
+PassParameter - C# - Done
+Get unique path for the input table - SQL/C# - Done
+Use columns table generate query in C#
+store value in order in variable or XML with Constrain
+
+
+Change ThePath to return tblPath model
+Keep List what db object query is using
+take schema in depedency 
+check with craig with some different approach
+
