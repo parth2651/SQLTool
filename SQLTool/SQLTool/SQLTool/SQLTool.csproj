@@ -64,8 +64,8 @@
     <Compile Include="Model\DependencyModel.cs" />
     <Compile Include="Model\TableMainModel.cs" />
     <Compile Include="Model\TablePathModel.cs" />
-    <Compile Include="ProcessRequest.cs" />
     <Compile Include="PreRequest.cs" />
+    <Compile Include="ProcessRequest.cs" />
     <Compile Include="SQLToolMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToolConstants.cs" />
