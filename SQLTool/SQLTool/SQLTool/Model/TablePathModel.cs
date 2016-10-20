@@ -8,7 +8,7 @@ namespace SQLTool.Model
 {
     public class TablePathModel
     {
-        public string PathID{ get; set; }
+        public int PathID{ get; set; }
         public string TableName { get; set; }
         public int Sequence { get; set; }
 

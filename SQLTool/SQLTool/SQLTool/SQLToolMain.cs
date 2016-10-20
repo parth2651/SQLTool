@@ -20,6 +20,8 @@ namespace SQLTool
         public static List<Model.DependencyModel> DependencyModelList { get; set; }
         public static List<Model.TablePathModel> TablePathModelList{ get; set; }
 
+        public static List<Model.TablePathModel> RequestedTablePathModelList { get; set; }
+
         #endregion properties
 
         static void Main(string[] args)
@@ -31,9 +33,13 @@ namespace SQLTool
 
         private static void Process()
         {
+            PreRequest preReq = new PreRequest();
+            DependencyModelList = preReq.GetDependency();
+            TablePathModelList = preReq.GetTablePath();
+
             ProcessRequest req = new ProcessRequest();
-            DependencyModelList = req.GetDependency();
-            TablePathModelList = req.GetTablePath();
+            RequestedTablePathModelList  = req.GetRequestedPath();
+
         }
 
         private static void ValidateParameter(string[] args)
