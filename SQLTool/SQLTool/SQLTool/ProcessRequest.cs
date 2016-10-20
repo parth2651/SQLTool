@@ -30,6 +30,16 @@ namespace SQLTool
             List<Model.TablePathModel> requestPath= SQLToolMain.TablePathModelList.Join(uniqTablePath,x=>x.PathID,y=>y.PathID,(x,y)=>x).ToList();
             return requestPath;
         }
-        
+
+        public List<Model.TableMainModel> GenerateQueries(List<Model.TablePathModel> requestedPath)
+        {
+            List<Model.TableMainModel>  objMainTableModel = new List<Model.TableMainModel>();
+            List<int> uniquePath = requestedPath.Select(x => x.PathID).Distinct().ToList();
+            for (int i = 00; i < uniquePath.Count; i++)
+            { }
+            return objMainTableModel;
+         
+        }
+
     }
 }

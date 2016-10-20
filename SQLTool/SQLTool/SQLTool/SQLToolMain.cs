@@ -28,17 +28,27 @@ namespace SQLTool
         {
             //commenting for now
             ValidateParameter(args);
+
+            //start the process
             Process();
         }
 
+        /// <summary>
+        /// Process 
+        /// </summary>
         private static void Process()
         {
+            //define pre requisite 
             PreRequest preReq = new PreRequest();
+            //get all depedency from database
             DependencyModelList = preReq.GetDependency();
+            //get all unique path (tree) from database
             TablePathModelList = preReq.GetTablePath();
 
+            //start processing 
             ProcessRequest req = new ProcessRequest();
             RequestedTablePathModelList  = req.GetRequestedPath();
+            List<Model.TableMainModel>  objMainTableModel = req.GenerateQueries(RequestedTablePathModelList);
 
         }
 
