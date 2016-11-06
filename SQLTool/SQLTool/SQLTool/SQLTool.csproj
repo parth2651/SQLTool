@@ -59,9 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Helper\AdjacencyList.cs" />
     <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\RegExHelper.cs" />
     <Compile Include="Helper\SQLHelper.cs" />
+    <Compile Include="Helper\Vertex.cs" />
+    <Compile Include="Helper\XMLConversionHelper.cs" />
     <Compile Include="Model\DependencyModel.cs" />
+    <Compile Include="Model\TableIteration.cs" />
     <Compile Include="Model\TableMainModel.cs" />
     <Compile Include="Model\TablePathModel.cs" />
     <Compile Include="PreRequest.cs" />

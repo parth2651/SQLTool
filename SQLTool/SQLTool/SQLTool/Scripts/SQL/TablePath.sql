@@ -1,6 +1,9 @@
 --*****************************************************************************************************************
 --To get the unique paths from It_Depends_Custom() (which was used to insert records in T_TEMP_PATH_CASE_TRF_INFO)
 --*****************************************************************************************************************
+
+/*
+
 SELECT  TheFullEntityName , iteration, ThePath into #testdata1 from dbo.It_Depends_Custom()
 
 DECLARE   @TableRanking TABLE (ThePath VARCHAR(max))
@@ -37,6 +40,10 @@ end
 drop table #testdata1
 
 SELECT * FROM @TableRanking
+
+*/
+
+SELECT  TheFullEntityName , iteration, ThePath from dbo.It_Depends_Custom()
 
 
 

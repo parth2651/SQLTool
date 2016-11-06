@@ -17,6 +17,9 @@ namespace SQLTool
         public static string InputTable { get; set; }
         public static string InputWhereCondition { get; set; }
 
+        public static string InputValue { get; set; }
+        public static string InputWhereColumn { get; set; }
+
         public static List<Model.DependencyModel> DependencyModelList { get; set; }
         public static List<Model.TablePathModel> TablePathModelList{ get; set; }
 
@@ -41,12 +44,17 @@ namespace SQLTool
             //define pre requisite 
             PreRequest preReq = new PreRequest();
             //get all depedency from database
+            Console.WriteLine("Getting Dependency - started");
             DependencyModelList = preReq.GetDependency();
+            Console.WriteLine("Getting Dependency - completed");
+            
             //get all unique path (tree) from database
+            Console.WriteLine("Getting All Table Path - started");
             TablePathModelList = preReq.GetTablePath();
-
+            Console.WriteLine("Getting All Table Path - completed");
+            
             //start processing 
-            ProcessRequest req = new ProcessRequest();
+            ProcessRequest req = new ProcessRequest(DependencyModelList, TablePathModelList);
             RequestedTablePathModelList  = req.GetRequestedPath();
             List<Model.TableMainModel>  objMainTableModel = req.GenerateQueries(RequestedTablePathModelList);
 
@@ -55,7 +63,10 @@ namespace SQLTool
         private static void ValidateParameter(string[] args)
         {
             InputTable = args[0];
-            InputWhereCondition = args[1]; 
+            InputWhereCondition = args[1];
+
+            InputWhereColumn = args[2];
+            InputValue = args[3];
             //throw new NotImplementedException();
         }
     }

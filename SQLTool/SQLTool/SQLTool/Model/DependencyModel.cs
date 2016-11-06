@@ -10,8 +10,10 @@ namespace SQLTool.Model
     {
         public string RERERENCING_TABLE_NAME { get; set; }
         public string RERERENCING_COLUMN_NAME { get; set; }
+        public string RERERENCING_COLUMN_DATA_TYPE { get; set; }
         public string REFERENCED_TABLE_NAME { get; set; }
         public string REFERENCED_COLUMN_NAME { get; set; }
+        public string REFERENCED_COLUMN_DATA_TYPE { get; set; }
         public string ResultXML { get; set; }
 
     }

@@ -10,7 +10,7 @@ namespace SQLTool.Model
     {
         public string TableName { get; set; }
         public List<SelectStatementModel> SelectStatements { get; set; }
-
+        public List<ColumnValuePair> ColumnValuePair { get; set; }
     }
     public class SelectStatementModel
     {
@@ -19,4 +19,9 @@ namespace SQLTool.Model
         public string ResultXML { get; set; }
     }
 
+    public class ColumnValuePair
+    {
+        public string ColumnName { get; set; }
+        public List<object> WhereValues { get; set; }
+    }
 }

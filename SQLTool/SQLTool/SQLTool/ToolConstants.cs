@@ -25,10 +25,14 @@ namespace SQLTool
         {
             public static string colRERERENCING_TABLE_NAME = "RERERENCING_TABLE_NAME";
             public static string colRERERENCING_COLUMN_NAME ="RERERENCING_COLUMN_NAME";
+            public static string colRERERENCING_COLUMN_DATA_TYPE = "RERERENCING_COLUMN_DATA_TYPE";
             public static string colREFERENCED_TABLE_NAME ="REFERENCED_TABLE_NAME";
             public static string colREFERENCED_COLUMN_NAME ="REFERENCED_COLUMN_NAME";
+            public static string colREFERENCED_COLUMN_DATA_TYPE = "REFERENCED_COLUMN_DATA_TYPE";
 
             public static string colTHEPATH = "ThePath";
+            public static string coliteration = "iteration";
+            public static string colTheFullEntityName = "TheFullEntityName";
         }
     }
 }

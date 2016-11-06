@@ -11,6 +11,7 @@ namespace SQLTool.Model
         public int PathID{ get; set; }
         public string TableName { get; set; }
         public int Sequence { get; set; }
+        public string EntirePath { get; set; }
 
     }
     
