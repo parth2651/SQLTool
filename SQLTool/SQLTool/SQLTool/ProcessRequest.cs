@@ -117,7 +117,8 @@ namespace SQLTool
                     //TraversedPath.AddRange(dividedPath);
 
 
-                   
+                    Console.WriteLine("Input level - " + dividedPath.Count.ToString() + " -----Create Queries level - " + this.PendingPathtoTravers.Count.ToString());
+                    
                     CreateQueries(this.PendingPathtoTravers);
                     
                 }
