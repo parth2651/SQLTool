@@ -117,11 +117,7 @@ namespace SQLTool
                     //TraversedPath.AddRange(dividedPath);
 
 
-                    Console.WriteLine("Input level - " + dividedPath.Count.ToString() + " -----Create Queries level - " + this.PendingPathtoTravers.Count.ToString());
-                    if (this.PendingPathtoTravers.Count(x => x.TableName == "dbo.T_CASE_PNS_MOM") > 0)
-                    {
-                        string s = "";
-                    }
+                   
                     CreateQueries(this.PendingPathtoTravers);
                     
                 }
